@@ -1,0 +1,54 @@
+ @mixin inicio_padding ($mt:150px, $mb:150px) {
+    margin-top: $mt;
+    margin-bottom: $mb;
+ }
+
+ @mixin botones ($fondob:$color1T ,$palabrab:$color4, $bordeb:$color4, $fondobh:$color4, $palabrabh:$color0,$bordebh:$color0){
+      background-color: $fondob;
+      color: $palabrab;
+      border: 2px solid $bordeb;
+      &:hover{
+          background-color: $fondobh;
+          color: $palabrabh;
+          border: 2px solid $bordebh;
+      }
+ }
+
+ @mixin formularios($marginf:50px, $fondof:$color1T,$boradf:10px,$paddingf:0px 20px 20px 20px,$bordef:3px $color1 solid){
+   margin-top: $marginf;
+   background-color: $fondof;
+   border-radius: $boradf;
+   padding: $paddingf;
+   border: $bordef;
+}
+
+@mixin sponsor-trabajan(){
+   margin-top: 50px;
+        .sponsors{
+            display: flex;
+            justify-content: center;
+            .spon{
+                margin: 1rem; 
+            }
+        }/*sponsors*/
+}
+@media screen and (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+body{
+    section{
+             .sponsors{
+                 display: flex;
+                 justify-content: center;
+                 flex-wrap: wrap;
+                 .spon{
+                     margin: 1rem; 
+                 }
+             }/*sponsors*/
+     }
+    }
+}
+
+

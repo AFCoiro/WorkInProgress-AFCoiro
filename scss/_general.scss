@@ -1,0 +1,84 @@
+@import "var";
+
+*{
+    margin: 0;
+    padding: 0;
+    } 
+body{
+    background-image: url(../img/fondo.jpg); 
+    width: 100%;
+    a{
+        text-decoration: none;
+    }
+    h1, h2, h3, h4, h5{
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+        color: $color4;
+    }
+    h2{
+        font-size: 50px;
+        text-align: center;
+        background-color: $color7;
+        padding: 50px;
+        margin-bottom: 50px;
+    }
+    h3{
+        font-size: 35px;
+        text-align: center;
+        background-color: $color7;
+    }
+    p{
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+        color: $color4;
+        font-size: 20px;
+    }
+    header{
+        background-color: $color7;
+        .wip_logo{
+            padding-left: 1rem;
+        }
+        .navRight {
+            display: flex;
+            justify-content: flex-end;
+            .menu_nav{
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+                margin-bottom: 0;
+                list-style: none;
+                text-align: right;
+                padding-right: 25px;
+            }
+        }
+    }/*header*/
+    footer{
+        border-top: 3px solid $color4;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;  
+        flex-direction: column;  
+        margin-top: 20px; 
+        h5{
+             font-size: 14px;
+             padding-top: 20px;
+             padding-bottom: 20px;
+        }
+        .redes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 7%;
+            padding-bottom: 20px;
+           }/*redes*/
+        .direcciones{
+            p{
+                color: $color4;
+                font-size: small;
+                text-align: center;
+
+            }
+        }
+    }/*footer*/
+}/*body*/
+

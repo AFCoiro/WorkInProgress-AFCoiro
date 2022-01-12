@@ -1,0 +1,19 @@
+@import "var";
+@import "extends";
+@import "mixins";
+
+body{
+    .cuerpo{
+        .cuerpoVid_div{
+            .formVideo{
+                @include formularios;
+                color: $color4;
+                .btn_video{
+                    @include botones;
+                    margin-top: 15px;
+                } 
+            }
+
+        }
+    }
+}

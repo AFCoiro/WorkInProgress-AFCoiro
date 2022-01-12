@@ -1,0 +1,32 @@
+@import "var";
+@import "extends";
+@import "mixins";
+
+body{
+    .somos{
+        @include inicio_padding;
+        h1{
+            @extend .titulos1;
+            font-size: 65px;
+
+
+        }
+        .subtitulo{
+            @extend .titulos2;
+            margin-bottom: 0%;  
+        }
+    }/*somos*/
+    section{
+        @include sponsor-trabajan;
+    }/*section*/
+    fieldset{
+        .form_contacto{
+            @include formularios;
+            div{
+                .btn_guardar{
+                    @include botones;
+                }
+            }
+        }
+    }/*fieldset*/
+}/*body*/

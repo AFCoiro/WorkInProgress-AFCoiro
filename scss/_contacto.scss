@@ -1,0 +1,52 @@
+@import "var";
+@import "extends";
+@import "mixins";
+
+body{
+    section{
+        @include inicio_padding;
+        h1{
+            @extend .titulos1;
+            font-size: 65px;
+        }
+        .subtitulo{
+            @extend .titulos2;
+        }
+        .tarjetas{
+            margin-top: 8%;
+            margin-bottom: 8%;
+            .mi_tarjeta{
+                background-color: $color1T;
+                h4{
+                    font-family: 'Outfit', sans-serif;
+                }
+                .mi_inner{
+                    overflow: hidden;
+                }
+                .mi_inner img{
+                    transition: all 1.5s ease;
+                    opacity: 0.5;
+                    &:hover{
+                        transform: scale(1.5);
+                        opacity: 1;
+                    }
+                }
+                .boton-rarrera{
+                    @include botones;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+body{
+    .tarjetas{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    }
+}

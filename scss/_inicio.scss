@@ -1,0 +1,86 @@
+@import "var";
+@import "extends";
+@import "mixins";
+
+body{
+    .fondo-imagenInicio{
+        @include inicio_padding;
+        width: 75%;
+        height: 600px;
+        animation-name: animacion;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-direction: normal;
+        .carta-inicio{
+            background-color: $color8;
+            h1{
+                @extend .titulos1;
+                font-size: 35px; 
+            }
+            .texto_carta{
+                text-shadow: 1px 1px 2px $color7, 0 0 1em $color7, 0 0 0.2em $color7;
+            }
+        }/*carta-inicio*/
+    }/*fondo-imagen inicio*/
+    .carreras{
+        margin-top: 50px;
+        padding: 50px;
+        background-color: $color7;
+        text-align: center;
+        h2{
+            border-bottom: $color4 solid 2px;
+        }
+    }/*carreras*/
+    @keyframes animacion{
+        0%{
+            background-image: url(../img/inicio/intro1.png);
+        }
+        25%{
+            background-image: url(../img/inicio/intro2.png);
+        }
+        50%{
+            background-image: url(../img/inicio/intro3.png);
+        }
+        75%{
+            background-image: url(../img/inicio/intro4.png);
+        }
+        100%{
+            background-image: url(../img/inicio/intro1.png);
+        }
+    }/*animacion*/
+    section{
+        margin-top: 50px;
+        .paralax-1{
+            @extend .parallax-carreras;
+            background-image: url(../img/imagen3.jpg);
+        }
+        .paralax-2{
+            @extend .parallax-carreras;
+            background-image: url(../img/imagen4.jpg);
+        }
+        .paralax-3{
+            @extend .parallax-carreras;
+            background-image: url(../img/imagen5.jpg);
+        }
+    }/*section*/
+    section{
+        @include sponsor-trabajan;
+    }/*section*/
+}/*body*/
+
+@media screen and (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+body{
+    .fondo-imagenInicio{
+        height: 50%;
+        width: 70%;
+        background-color: $color1T;
+        animation-duration: 0s;
+        
+    }
+    }
+}
