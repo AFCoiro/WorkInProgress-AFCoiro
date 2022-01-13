@@ -8,7 +8,9 @@ $colores: (
     color5: rgb(241, 255, 112),
     color6: #ffffff,
     color7: black,
-    color8: rgba(10,10,10,0.1)
+    color8: rgba(10,10,10,0.1),
+    color9: rgba(241, 255, 112,0.5),
+    color10: rgba(104, 104, 104, 0.5),
 );
 
 $color0: map-get($colores , color0);
@@ -21,5 +23,8 @@ $color5: map-get($colores , color5);
 $color6: map-get($colores , color6);
 $color7: map-get($colores , color7);
 $color8: map-get($colores , color8);
+$color9: map-get($colores , color9);
+$color10: map-get($colores , color10);
+
 
 

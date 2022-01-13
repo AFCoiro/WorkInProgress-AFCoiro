@@ -19,8 +19,8 @@ body{
         font-size: 50px;
         text-align: center;
         background-color: $color7;
-        padding: 50px;
-        margin-bottom: 50px;
+        // padding: 50px;
+        // margin-bottom: 50px;
     }
     h3{
         font-size: 35px;
@@ -41,17 +41,21 @@ body{
         .navRight {
             display: flex;
             justify-content: flex-end;
-            .menu_nav{
-                display: flex;
-                flex-direction: column;
-                padding-left: 0;
-                margin-bottom: 0;
-                list-style: none;
-                text-align: right;
-                padding-right: 25px;
+            padding-right: 25px;
+        }
+        nav{
+            a{
+                color: $color3;
+                transition: 0.5s;    
+                &:hover{ 
+                    color: $color5;
+                    background-color: $color10; 
+                    border-radius: 5px;
+                 }
             }
         }
     }/*header*/
+
     footer{
         border-top: 3px solid $color4;
         display: flex;

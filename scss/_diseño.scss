@@ -1,0 +1,84 @@
+@import "var";
+@import "extends";
+@import "mixins";
+
+body{
+    .fondo-graf{
+        background-image: url(../img/diseño/fondo-graf.png);
+        @extend .cuerpo-diseño;
+    }
+    .fondo-multi{
+        background-image: url(../img/diseño/fondo-multi.png);
+        @extend .cuerpo-diseño;
+    }
+    .fondo-web{
+        background-image: url(../img/diseño/fondo-web.png);
+        @extend .cuerpo-diseño;
+    }
+    .descrip{
+        background-color: $color7;
+        h3{
+            @extend .titulos2;
+            font-size: 50px;
+            border-bottom: $color4 solid 2px;
+        }
+        .videodi{
+            width: 65%;
+
+        }
+    }
+    section{ 
+        div{
+            .modales{
+                @include formularios;
+                h4{
+                    @extend .titulos2;
+                }
+                button{
+                    @include botones;
+                }
+                .modal-cuerpo{
+                    background-color: $color0; 
+                    color: $color4;
+                }
+            }
+        }
+    }
+    .egresados{
+        text-align: center;
+        h3{
+            font-size: 50px;
+            
+        }
+        .trabajos{
+            margin: 10px 10px 10px 10px;
+            box-shadow: 8px  8px  $color7;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+body{
+    section{
+        div{
+            div{
+                .modales{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                }
+
+            }
+        }
+    }
+    .descrip{
+        .videodi{
+            width: 100%;
+        }
+    }       
+}
+}

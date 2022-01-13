@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0; }
@@ -16,9 +17,7 @@ body {
   body h2 {
     font-size: 50px;
     text-align: center;
-    background-color: black;
-    padding: 50px;
-    margin-bottom: 50px; }
+    background-color: black; }
   body h3 {
     font-size: 35px;
     text-align: center;
@@ -34,15 +33,15 @@ body {
       padding-left: 1rem; }
     body header .navRight {
       display: flex;
-      justify-content: flex-end; }
-      body header .navRight .menu_nav {
-        display: flex;
-        flex-direction: column;
-        padding-left: 0;
-        margin-bottom: 0;
-        list-style: none;
-        text-align: right;
-        padding-right: 25px; }
+      justify-content: flex-end;
+      padding-right: 25px; }
+    body header nav a {
+      color: #f9fab6;
+      transition: 0.5s; }
+      body header nav a:hover {
+        color: #f1ff70;
+        background-color: rgba(104, 104, 104, 0.5);
+        border-radius: 5px; }
   body footer {
     border-top: 3px solid #fce8cf;
     display: flex;
@@ -67,66 +66,18 @@ body {
       text-align: center; }
 
 /*body*/
-.parallax-carreras, body section .paralax-1, body section .paralax-2, body section .paralax-3 {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  overflow: hidden;
-  position: relative;
-  background-attachment: fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  transition: all 1.5s ease;
-  background-color: rgba(27, 95, 148, 0.5);
-  opacity: 0.5; }
-  .parallax-carreras h3, body section .paralax-1 h3, body section .paralax-2 h3, body section .paralax-3 h3 {
-    top: 0;
-    font-size: 50px;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s ease-out;
-    visibility: visible;
-    text-align: center; }
-  .parallax-carreras:hover, body section .paralax-1:hover, body section .paralax-2:hover, body section .paralax-3:hover {
-    opacity: 1; }
-    .parallax-carreras:hover h3, body section .paralax-1:hover h3, body section .paralax-2:hover h3, body section .paralax-3:hover h3 {
-      background-color: rgba(27, 95, 148, 0.5);
-      text-shadow: 0 0 2em #1b5f94, 0 0 0.2em #1b5f94; }
-
-.titulos1, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
-  color: #154b74;
-  text-align: center;
-  background-color: #f1ff70; }
-
-.titulos2, body .somos .subtitulo, body section .subtitulo {
-  text-align: center;
-  background-color: black; }
-
-/*extend*/
-.col-empresas {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .col-empresas .empresa {
-    font-size: 35px; }
-  .col-empresas .boton {
-    text-decoration: none;
-    color: #fce8cf;
-    background-color: #1b5f94;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 4px;
-    transition: 0.5s;
-    overflow: hidden;
-    border: 3px solid #288bd6; }
-    .col-empresas .boton:hover {
-      background-color: #288bd6;
-      color: #f1ff70;
-      transform: scale(1.2);
-      font-family: 'Alegreya Sans bold', sans-serif; }
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  body section {
+    /*sponsors*/ }
+    body section .sponsors {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body section .sponsors .spon {
+        margin: 1rem; } }
 
 .parallax-carreras, body section .paralax-1, body section .paralax-2, body section .paralax-3 {
   padding-top: 200px;
@@ -156,38 +107,118 @@ body {
       background-color: rgba(27, 95, 148, 0.5);
       text-shadow: 0 0 2em #1b5f94, 0 0 0.2em #1b5f94; }
 
-.titulos1, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
+.titulos1, .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1, .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
   color: #154b74;
   text-align: center;
   background-color: #f1ff70; }
 
-.titulos2, body .somos .subtitulo, body section .subtitulo {
+.titulos2, body .somos .subtitulo, body section .subtitulo, body .descrip h3, body section div .modales h4 {
   text-align: center;
   background-color: black; }
 
-/*extend*/
-.col-empresas {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .col-empresas .empresa {
-    font-size: 35px; }
-  .col-empresas .boton {
-    text-decoration: none;
-    color: #fce8cf;
-    background-color: #1b5f94;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 4px;
-    transition: 0.5s;
-    overflow: hidden;
-    border: 3px solid #288bd6; }
-    .col-empresas .boton:hover {
-      background-color: #288bd6;
-      color: #f1ff70;
-      transform: scale(1.2);
-      font-family: 'Alegreya Sans bold', sans-serif; }
+.cuerpo-diseño, body .fondo-graf, body .fondo-multi, body .fondo-web {
+  margin-top: 110px;
+  margin-bottom: 150px;
+  height: 737px; }
+  .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1 {
+    font-size: 65px; }
+  .cuerpo-diseño .carta-ux, body .fondo-graf .carta-ux, body .fondo-multi .carta-ux, body .fondo-web .carta-ux {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 200px; }
+    .cuerpo-diseño .carta-ux .carta-inicio, body .fondo-graf .carta-ux .carta-inicio, body .fondo-multi .carta-ux .carta-inicio, body .fondo-web .carta-ux .carta-inicio {
+      background-color: black;
+      box-shadow: 10px 10px rgba(27, 95, 148, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2 {
+        font-size: 35px;
+        box-shadow: 3px 3px rgba(241, 255, 112, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio .btn_mio, body .fondo-graf .carta-ux .carta-inicio .btn_mio, body .fondo-multi .carta-ux .carta-inicio .btn_mio, body .fondo-web .carta-ux .carta-inicio .btn_mio {
+        background-color: #f1ff70;
+        color: #154b74;
+        border: 2px solid #f1ff70; }
+        .cuerpo-diseño .carta-ux .carta-inicio .btn_mio:hover, body .fondo-graf .carta-ux .carta-inicio .btn_mio:hover, body .fondo-multi .carta-ux .carta-inicio .btn_mio:hover, body .fondo-web .carta-ux .carta-inicio .btn_mio:hover {
+          background-color: #154b74;
+          color: #ffffff;
+          border: 2px solid #154b74; }
+
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  body section {
+    /*sponsors*/ }
+    body section .sponsors {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body section .sponsors .spon {
+        margin: 1rem; } }
+
+.parallax-carreras, body section .paralax-1, body section .paralax-2, body section .paralax-3 {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: all 1.5s ease;
+  background-color: rgba(27, 95, 148, 0.5);
+  opacity: 0.5; }
+  .parallax-carreras h3, body section .paralax-1 h3, body section .paralax-2 h3, body section .paralax-3 h3 {
+    top: 0;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-out;
+    visibility: visible;
+    text-align: center; }
+  .parallax-carreras:hover, body section .paralax-1:hover, body section .paralax-2:hover, body section .paralax-3:hover {
+    opacity: 1; }
+    .parallax-carreras:hover h3, body section .paralax-1:hover h3, body section .paralax-2:hover h3, body section .paralax-3:hover h3 {
+      background-color: rgba(27, 95, 148, 0.5);
+      text-shadow: 0 0 2em #1b5f94, 0 0 0.2em #1b5f94; }
+
+.titulos1, .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1, .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
+  color: #154b74;
+  text-align: center;
+  background-color: #f1ff70; }
+
+.titulos2, body .somos .subtitulo, body section .subtitulo, body .descrip h3, body section div .modales h4 {
+  text-align: center;
+  background-color: black; }
+
+.cuerpo-diseño, body .fondo-graf, body .fondo-multi, body .fondo-web {
+  margin-top: 110px;
+  margin-bottom: 150px;
+  height: 737px; }
+  .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1 {
+    font-size: 65px; }
+  .cuerpo-diseño .carta-ux, body .fondo-graf .carta-ux, body .fondo-multi .carta-ux, body .fondo-web .carta-ux {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 200px; }
+    .cuerpo-diseño .carta-ux .carta-inicio, body .fondo-graf .carta-ux .carta-inicio, body .fondo-multi .carta-ux .carta-inicio, body .fondo-web .carta-ux .carta-inicio {
+      background-color: black;
+      box-shadow: 10px 10px rgba(27, 95, 148, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2 {
+        font-size: 35px;
+        box-shadow: 3px 3px rgba(241, 255, 112, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio .btn_mio, body .fondo-graf .carta-ux .carta-inicio .btn_mio, body .fondo-multi .carta-ux .carta-inicio .btn_mio, body .fondo-web .carta-ux .carta-inicio .btn_mio {
+        background-color: #f1ff70;
+        color: #154b74;
+        border: 2px solid #f1ff70; }
+        .cuerpo-diseño .carta-ux .carta-inicio .btn_mio:hover, body .fondo-graf .carta-ux .carta-inicio .btn_mio:hover, body .fondo-multi .carta-ux .carta-inicio .btn_mio:hover, body .fondo-web .carta-ux .carta-inicio .btn_mio:hover {
+          background-color: #154b74;
+          color: #ffffff;
+          border: 2px solid #154b74; }
 
 @media screen and (max-width: 768px) {
   * {
@@ -209,10 +240,13 @@ body {
   /*section*/
   /*section*/ }
   body .fondo-imagenInicio {
-    margin-top: 150px;
+    margin-top: 110px;
     margin-bottom: 150px;
     width: 75%;
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     animation-name: animacion;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -247,11 +281,11 @@ body {
   body section {
     margin-top: 50px; }
     body section .paralax-1 {
-      background-image: url(../img/imagen3.jpg); }
+      background-image: url(../img/diseño/fondo-graf.png); }
     body section .paralax-2 {
-      background-image: url(../img/imagen4.jpg); }
+      background-image: url(../img/diseño/fondo-multi.png); }
     body section .paralax-3 {
-      background-image: url(../img/imagen5.jpg); }
+      background-image: url(../img/diseño/fondo-web.png); }
   body section {
     margin-top: 50px;
     /*sponsors*/ }
@@ -267,10 +301,26 @@ body {
     margin: 0;
     padding: 0; }
   body .fondo-imagenInicio {
-    height: 50%;
-    width: 70%;
-    background-color: rgba(27, 95, 148, 0.5);
-    animation-duration: 0s; } }
+    width: 80%;
+    background-image: url(../img/inicio/intro.png);
+    animation-duration: 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
+
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  body section {
+    /*sponsors*/ }
+    body section .sponsors {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body section .sponsors .spon {
+        margin: 1rem; } }
 
 .parallax-carreras, body section .paralax-1, body section .paralax-2, body section .paralax-3 {
   padding-top: 200px;
@@ -300,38 +350,41 @@ body {
       background-color: rgba(27, 95, 148, 0.5);
       text-shadow: 0 0 2em #1b5f94, 0 0 0.2em #1b5f94; }
 
-.titulos1, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
+.titulos1, .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1, .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
   color: #154b74;
   text-align: center;
   background-color: #f1ff70; }
 
-.titulos2, body .somos .subtitulo, body section .subtitulo {
+.titulos2, body .somos .subtitulo, body section .subtitulo, body .descrip h3, body section div .modales h4 {
   text-align: center;
   background-color: black; }
 
-/*extend*/
-.col-empresas {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .col-empresas .empresa {
-    font-size: 35px; }
-  .col-empresas .boton {
-    text-decoration: none;
-    color: #fce8cf;
-    background-color: #1b5f94;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 4px;
-    transition: 0.5s;
-    overflow: hidden;
-    border: 3px solid #288bd6; }
-    .col-empresas .boton:hover {
-      background-color: #288bd6;
-      color: #f1ff70;
-      transform: scale(1.2);
-      font-family: 'Alegreya Sans bold', sans-serif; }
+.cuerpo-diseño, body .fondo-graf, body .fondo-multi, body .fondo-web {
+  margin-top: 110px;
+  margin-bottom: 150px;
+  height: 737px; }
+  .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1 {
+    font-size: 65px; }
+  .cuerpo-diseño .carta-ux, body .fondo-graf .carta-ux, body .fondo-multi .carta-ux, body .fondo-web .carta-ux {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 200px; }
+    .cuerpo-diseño .carta-ux .carta-inicio, body .fondo-graf .carta-ux .carta-inicio, body .fondo-multi .carta-ux .carta-inicio, body .fondo-web .carta-ux .carta-inicio {
+      background-color: black;
+      box-shadow: 10px 10px rgba(27, 95, 148, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2 {
+        font-size: 35px;
+        box-shadow: 3px 3px rgba(241, 255, 112, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio .btn_mio, body .fondo-graf .carta-ux .carta-inicio .btn_mio, body .fondo-multi .carta-ux .carta-inicio .btn_mio, body .fondo-web .carta-ux .carta-inicio .btn_mio {
+        background-color: #f1ff70;
+        color: #154b74;
+        border: 2px solid #f1ff70; }
+        .cuerpo-diseño .carta-ux .carta-inicio .btn_mio:hover, body .fondo-graf .carta-ux .carta-inicio .btn_mio:hover, body .fondo-multi .carta-ux .carta-inicio .btn_mio:hover, body .fondo-web .carta-ux .carta-inicio .btn_mio:hover {
+          background-color: #154b74;
+          color: #ffffff;
+          border: 2px solid #154b74; }
 
 @media screen and (max-width: 768px) {
   * {
@@ -351,7 +404,7 @@ body {
   /*section*/
   /*fieldset*/ }
   body .somos {
-    margin-top: 150px;
+    margin-top: 110px;
     margin-bottom: 150px; }
     body .somos h1 {
       font-size: 65px; }
@@ -381,6 +434,19 @@ body {
         border: 2px solid #154b74; }
 
 /*body*/
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  body section {
+    /*sponsors*/ }
+    body section .sponsors {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body section .sponsors .spon {
+        margin: 1rem; } }
+
 .parallax-carreras, body section .paralax-1, body section .paralax-2, body section .paralax-3 {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -409,38 +475,41 @@ body {
       background-color: rgba(27, 95, 148, 0.5);
       text-shadow: 0 0 2em #1b5f94, 0 0 0.2em #1b5f94; }
 
-.titulos1, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
+.titulos1, .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1, .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
   color: #154b74;
   text-align: center;
   background-color: #f1ff70; }
 
-.titulos2, body .somos .subtitulo, body section .subtitulo {
+.titulos2, body .somos .subtitulo, body section .subtitulo, body .descrip h3, body section div .modales h4 {
   text-align: center;
   background-color: black; }
 
-/*extend*/
-.col-empresas {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .col-empresas .empresa {
-    font-size: 35px; }
-  .col-empresas .boton {
-    text-decoration: none;
-    color: #fce8cf;
-    background-color: #1b5f94;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 4px;
-    transition: 0.5s;
-    overflow: hidden;
-    border: 3px solid #288bd6; }
-    .col-empresas .boton:hover {
-      background-color: #288bd6;
-      color: #f1ff70;
-      transform: scale(1.2);
-      font-family: 'Alegreya Sans bold', sans-serif; }
+.cuerpo-diseño, body .fondo-graf, body .fondo-multi, body .fondo-web {
+  margin-top: 110px;
+  margin-bottom: 150px;
+  height: 737px; }
+  .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1 {
+    font-size: 65px; }
+  .cuerpo-diseño .carta-ux, body .fondo-graf .carta-ux, body .fondo-multi .carta-ux, body .fondo-web .carta-ux {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 200px; }
+    .cuerpo-diseño .carta-ux .carta-inicio, body .fondo-graf .carta-ux .carta-inicio, body .fondo-multi .carta-ux .carta-inicio, body .fondo-web .carta-ux .carta-inicio {
+      background-color: black;
+      box-shadow: 10px 10px rgba(27, 95, 148, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2 {
+        font-size: 35px;
+        box-shadow: 3px 3px rgba(241, 255, 112, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio .btn_mio, body .fondo-graf .carta-ux .carta-inicio .btn_mio, body .fondo-multi .carta-ux .carta-inicio .btn_mio, body .fondo-web .carta-ux .carta-inicio .btn_mio {
+        background-color: #f1ff70;
+        color: #154b74;
+        border: 2px solid #f1ff70; }
+        .cuerpo-diseño .carta-ux .carta-inicio .btn_mio:hover, body .fondo-graf .carta-ux .carta-inicio .btn_mio:hover, body .fondo-multi .carta-ux .carta-inicio .btn_mio:hover, body .fondo-web .carta-ux .carta-inicio .btn_mio:hover {
+          background-color: #154b74;
+          color: #ffffff;
+          border: 2px solid #154b74; }
 
 @media screen and (max-width: 768px) {
   * {
@@ -456,7 +525,7 @@ body {
         margin: 1rem; } }
 
 body section {
-  margin-top: 150px;
+  margin-top: 110px;
   margin-bottom: 150px; }
   body section h1 {
     font-size: 65px; }
@@ -492,6 +561,19 @@ body section {
     display: flex;
     flex-wrap: wrap; } }
 
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  body section {
+    /*sponsors*/ }
+    body section .sponsors {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body section .sponsors .spon {
+        margin: 1rem; } }
+
 .parallax-carreras, body section .paralax-1, body section .paralax-2, body section .paralax-3 {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -520,144 +602,41 @@ body section {
       background-color: rgba(27, 95, 148, 0.5);
       text-shadow: 0 0 2em #1b5f94, 0 0 0.2em #1b5f94; }
 
-.titulos1, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
+.titulos1, .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1, .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
   color: #154b74;
   text-align: center;
   background-color: #f1ff70; }
 
-.titulos2, body .somos .subtitulo, body section .subtitulo {
+.titulos2, body .somos .subtitulo, body section .subtitulo, body .descrip h3, body section div .modales h4 {
   text-align: center;
   background-color: black; }
 
-/*extend*/
-.col-empresas {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .col-empresas .empresa {
-    font-size: 35px; }
-  .col-empresas .boton {
-    text-decoration: none;
-    color: #fce8cf;
-    background-color: #1b5f94;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 4px;
-    transition: 0.5s;
-    overflow: hidden;
-    border: 3px solid #288bd6; }
-    .col-empresas .boton:hover {
-      background-color: #288bd6;
-      color: #f1ff70;
-      transform: scale(1.2);
-      font-family: 'Alegreya Sans bold', sans-serif; }
-
-@media screen and (max-width: 768px) {
-  * {
-    margin: 0;
-    padding: 0; }
-  body section {
-    /*sponsors*/ }
-    body section .sponsors {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap; }
-      body section .sponsors .spon {
-        margin: 1rem; } }
-
-body {
-  /*etiqueta cuerpo*/ }
-  body .cuerpo {
-    /*etiqueta cuestion1*/ }
-    body .cuerpo .cuestion1 {
-      margin-top: 50px;
-      background-color: rgba(27, 95, 148, 0.5);
-      border-radius: 10px;
-      padding: 0px 20px 20px 20px;
-      border: 3px #1b5f94 solid;
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      flex-direction: column;
-      width: 70%;
-      gap: 10px; }
-      body .cuerpo .cuestion1 .btn_mio {
-        background-color: rgba(27, 95, 148, 0.5);
-        color: #fce8cf;
-        border: 2px solid #fce8cf; }
-        body .cuerpo .cuestion1 .btn_mio:hover {
-          background-color: #fce8cf;
-          color: #154b74;
+.cuerpo-diseño, body .fondo-graf, body .fondo-multi, body .fondo-web {
+  margin-top: 110px;
+  margin-bottom: 150px;
+  height: 737px; }
+  .cuerpo-diseño h1, body .fondo-graf h1, body .fondo-multi h1, body .fondo-web h1 {
+    font-size: 65px; }
+  .cuerpo-diseño .carta-ux, body .fondo-graf .carta-ux, body .fondo-multi .carta-ux, body .fondo-web .carta-ux {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 200px; }
+    .cuerpo-diseño .carta-ux .carta-inicio, body .fondo-graf .carta-ux .carta-inicio, body .fondo-multi .carta-ux .carta-inicio, body .fondo-web .carta-ux .carta-inicio {
+      background-color: black;
+      box-shadow: 10px 10px rgba(27, 95, 148, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio h2, body .fondo-graf .carta-ux .carta-inicio h2, body .fondo-multi .carta-ux .carta-inicio h2, body .fondo-web .carta-ux .carta-inicio h2 {
+        font-size: 35px;
+        box-shadow: 3px 3px rgba(241, 255, 112, 0.5); }
+      .cuerpo-diseño .carta-ux .carta-inicio .btn_mio, body .fondo-graf .carta-ux .carta-inicio .btn_mio, body .fondo-multi .carta-ux .carta-inicio .btn_mio, body .fondo-web .carta-ux .carta-inicio .btn_mio {
+        background-color: #f1ff70;
+        color: #154b74;
+        border: 2px solid #f1ff70; }
+        .cuerpo-diseño .carta-ux .carta-inicio .btn_mio:hover, body .fondo-graf .carta-ux .carta-inicio .btn_mio:hover, body .fondo-multi .carta-ux .carta-inicio .btn_mio:hover, body .fondo-web .carta-ux .carta-inicio .btn_mio:hover {
+          background-color: #154b74;
+          color: #ffffff;
           border: 2px solid #154b74; }
-      body .cuerpo .cuestion1 .legend {
-        font-family: 'Outfit', sans-serif;
-        font-size: 40px;
-        text-align: center;
-        margin-top: 20px;
-        color: #f9fab6; }
-
-/*etiqueta body*/
-.parallax-carreras, body section .paralax-1, body section .paralax-2, body section .paralax-3 {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  overflow: hidden;
-  position: relative;
-  background-attachment: fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  transition: all 1.5s ease;
-  background-color: rgba(27, 95, 148, 0.5);
-  opacity: 0.5; }
-  .parallax-carreras h3, body section .paralax-1 h3, body section .paralax-2 h3, body section .paralax-3 h3 {
-    top: 0;
-    font-size: 50px;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s ease-out;
-    visibility: visible;
-    text-align: center; }
-  .parallax-carreras:hover, body section .paralax-1:hover, body section .paralax-2:hover, body section .paralax-3:hover {
-    opacity: 1; }
-    .parallax-carreras:hover h3, body section .paralax-1:hover h3, body section .paralax-2:hover h3, body section .paralax-3:hover h3 {
-      background-color: rgba(27, 95, 148, 0.5);
-      text-shadow: 0 0 2em #1b5f94, 0 0 0.2em #1b5f94; }
-
-.titulos1, body .fondo-imagenInicio .carta-inicio h1, body .somos h1, body section h1 {
-  color: #154b74;
-  text-align: center;
-  background-color: #f1ff70; }
-
-.titulos2, body .somos .subtitulo, body section .subtitulo {
-  text-align: center;
-  background-color: black; }
-
-/*extend*/
-.col-empresas {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .col-empresas .empresa {
-    font-size: 35px; }
-  .col-empresas .boton {
-    text-decoration: none;
-    color: #fce8cf;
-    background-color: #1b5f94;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 4px;
-    transition: 0.5s;
-    overflow: hidden;
-    border: 3px solid #288bd6; }
-    .col-empresas .boton:hover {
-      background-color: #288bd6;
-      color: #f1ff70;
-      transform: scale(1.2);
-      font-family: 'Alegreya Sans bold', sans-serif; }
 
 @media screen and (max-width: 768px) {
   * {
@@ -672,19 +651,56 @@ body {
       body section .sponsors .spon {
         margin: 1rem; } }
 
-body .cuerpo .cuerpoVid_div .formVideo {
+body .fondo-graf {
+  background-image: url(../img/diseño/fondo-graf.png); }
+
+body .fondo-multi {
+  background-image: url(../img/diseño/fondo-multi.png); }
+
+body .fondo-web {
+  background-image: url(../img/diseño/fondo-web.png); }
+
+body .descrip {
+  background-color: black; }
+  body .descrip h3 {
+    font-size: 50px;
+    border-bottom: #fce8cf solid 2px; }
+  body .descrip .videodi {
+    width: 65%; }
+
+body section div .modales {
   margin-top: 50px;
   background-color: rgba(27, 95, 148, 0.5);
   border-radius: 10px;
   padding: 0px 20px 20px 20px;
-  border: 3px #1b5f94 solid;
-  color: #fce8cf; }
-  body .cuerpo .cuerpoVid_div .formVideo .btn_video {
+  border: 3px #1b5f94 solid; }
+  body section div .modales button {
     background-color: rgba(27, 95, 148, 0.5);
     color: #fce8cf;
-    border: 2px solid #fce8cf;
-    margin-top: 15px; }
-    body .cuerpo .cuerpoVid_div .formVideo .btn_video:hover {
+    border: 2px solid #fce8cf; }
+    body section div .modales button:hover {
       background-color: #fce8cf;
       color: #154b74;
       border: 2px solid #154b74; }
+  body section div .modales .modal-cuerpo {
+    background-color: #154b74;
+    color: #fce8cf; }
+
+body .egresados {
+  text-align: center; }
+  body .egresados h3 {
+    font-size: 50px; }
+  body .egresados .trabajos {
+    margin: 10px 10px 10px 10px;
+    box-shadow: 8px 8px black; }
+
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  body section div div .modales {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+  body .descrip .videodi {
+    width: 100%; } }

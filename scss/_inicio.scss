@@ -7,6 +7,9 @@ body{
         @include inicio_padding;
         width: 75%;
         height: 600px;
+        display: flex;
+        flex-direction: column;
+         align-items: flex-end; 
         animation-name: animacion;
         animation-duration: 5s;
         animation-iteration-count: infinite;
@@ -21,7 +24,7 @@ body{
             .texto_carta{
                 text-shadow: 1px 1px 2px $color7, 0 0 1em $color7, 0 0 0.2em $color7;
             }
-        }/*carta-inicio*/
+        }/*carta-inicio*/ 
     }/*fondo-imagen inicio*/
     .carreras{
         margin-top: 50px;
@@ -53,15 +56,15 @@ body{
         margin-top: 50px;
         .paralax-1{
             @extend .parallax-carreras;
-            background-image: url(../img/imagen3.jpg);
+            background-image: url(../img/diseño/fondo-graf.png);
         }
         .paralax-2{
             @extend .parallax-carreras;
-            background-image: url(../img/imagen4.jpg);
+            background-image: url(../img/diseño/fondo-multi.png);
         }
         .paralax-3{
             @extend .parallax-carreras;
-            background-image: url(../img/imagen5.jpg);
+            background-image: url(../img/diseño/fondo-web.png);
         }
     }/*section*/
     section{
@@ -76,11 +79,13 @@ body{
     }
 body{
     .fondo-imagenInicio{
-        height: 50%;
-        width: 70%;
-        background-color: $color1T;
+        width: 80%;
+        background-image: url(../img/inicio/intro.png);
         animation-duration: 0s;
-        
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+         align-items: center; 
+         }
     }
 }
